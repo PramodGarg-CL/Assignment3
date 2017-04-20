@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Assignment3</string>
+    <string name="swipe_to_change"><![CDATA[<-----Swipe to Change----->]]></string>
+
+    <string name="splash_screen">SplashScreen</string>
+    <string name="tab_layout_title_completed">Completed</string>
+    <string name="tab_layout_title_cancelled">Cancelled</string>
+    <string name="tab_layout_title_pending">Pending</string>
+    <string name="tab_layout_title_accepted">Accepted</string>
+    <string name="tab_layout_title_past">Past</string>
+    <string name="tab_layout_title_upcoming">Upcoming</string>
+    <string name="dummy_data_accept_1">Accepteddata1</string>
+    <string name="dummy_date">Jan 29,2017</string>
+    <string name="dummy_place">Room No 1</string>
+    <string name="dummy_data_accept_2">Accepteddata2</string>
+    <string name="dummy_data_accept_3">Accepteddata3</string>
+    <string name="dummy_data_cancel_1">CancelledItem1</string>
+    <string name="dummy_data_cancel_2">CancelledItem2</string>
+    <string name="dummy_data_cancel_3">CancelledItem3</string>
+    <string name="dummy_data_complete_1">CompletedItem1</string>
+    <string name="dummy_data_complete_2">CompletedItem2</string>
+    <string name="dummy_data_complete_3">CompletedItem3</string>
+    <string name="dummy_data_pending_1">PendingItem1</string>
+    <string name="dummy_data_pending_2">PendingItem2</string>
+    <string name="dummy_data_pending_3">PendingItem3</string>
+    <string name="no_data">No Data Found</string>
+</resources>

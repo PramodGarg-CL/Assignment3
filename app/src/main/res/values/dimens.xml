@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_view_size_large">16sp</dimen>
+    <dimen name="tab_layout_height">48dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="row_margin">8dp</dimen>
+</resources>
