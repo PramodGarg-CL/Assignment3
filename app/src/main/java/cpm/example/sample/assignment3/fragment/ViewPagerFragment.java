@@ -17,10 +17,10 @@ import cpm.example.sample.assignment3.R;
  */
 
 public class ViewPagerFragment extends BaseFragment {
-    private CustomViewPager mViewPager;
+    private CustomViewPager customViewPager;
     private Fragment fragment1;
     private Fragment fragment2;
-    private TabLayout mTabLayout;
+    private TabLayout tabLayout;
     private String mTitleFragment1;
     private String mTitleFragment2;
 
@@ -47,7 +47,7 @@ public class ViewPagerFragment extends BaseFragment {
         init(view);
 
 
-        mViewPager.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
+        customViewPager.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
 
@@ -67,7 +67,7 @@ public class ViewPagerFragment extends BaseFragment {
                 return 2;
             }
         });
-        mTabLayout.setupWithViewPager(mViewPager);
+        tabLayout.setupWithViewPager(customViewPager);
 
         return view;
     }
@@ -80,8 +80,8 @@ public class ViewPagerFragment extends BaseFragment {
      * @param view
      */
     private void init(View view) {
-        mViewPager = (CustomViewPager) view.findViewById(R.id.view_pager);
-        mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        customViewPager = (CustomViewPager) view.findViewById(R.id.view_pager);
+        tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         code = getArguments().getInt("code");
 
 
@@ -92,12 +92,12 @@ public class ViewPagerFragment extends BaseFragment {
             mTitleFragment1 = getString(R.string.tab_layout_title_upcoming);
             mTitleFragment2 = getString(R.string.tab_layout_title_past);
 
-            //  mTabLayout.setVisibility(View.VISIBLE);
-            mTabLayout.setTabTextColors(ContextCompat.getColor(getActivity(), android.R.color.white),
+            //  tabLayout.setVisibility(View.VISIBLE);
+            tabLayout.setTabTextColors(ContextCompat.getColor(getActivity(), android.R.color.white),
                     ContextCompat.getColor(getActivity(), R.color.colorAccent));
-            mTabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary));
+            tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary));
             // disable the swipe on the viewpager
-            mViewPager.setPagingEnabled(false);
+            customViewPager.setPagingEnabled(false);
             fragment1 = ViewPagerFragment.getInstance(CODE_VIEWPAGER_UPCOMING);
             fragment2 = ViewPagerFragment.getInstance(CODE_VIEWPAGER_PAST);
 
@@ -106,25 +106,25 @@ public class ViewPagerFragment extends BaseFragment {
             /*
             If viewpager in fragment1, get instance 2 of fragment1
              */
-            mTabLayout.setBackgroundResource(android.R.color.white);
-            mTabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+            tabLayout.setBackgroundResource(android.R.color.white);
+            tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(getActivity(), R.color.colorAccent));
             //enable views change on swipe of viewpager
-            mViewPager.setPagingEnabled(true);
+            customViewPager.setPagingEnabled(true);
             if (code == CODE_VIEWPAGER_PAST) {
                 //set Titles to tablayout
                 mTitleFragment1 = getString(R.string.tab_layout_title_completed);
                 mTitleFragment2 = getString(R.string.tab_layout_title_cancelled);
 
                 //returns fragments with code
-                fragment1 = MyFragment.getInstance(CODE_FRAGMENT_EVENT_COMPLETED);
-                fragment2 = MyFragment.getInstance(CODE_FRAGMENT_EVENT_CANCELLED);
+                fragment1 = EventFragment.getInstance(CODE_FRAGMENT_EVENT_COMPLETED);
+                fragment2 = EventFragment.getInstance(CODE_FRAGMENT_EVENT_CANCELLED);
             } else if (code == CODE_VIEWPAGER_UPCOMING) {
                 //set Titles to tablayout
                 mTitleFragment1 = getString(R.string.tab_layout_title_accepted);
                 mTitleFragment2 = getString(R.string.tab_layout_title_pending);
 
-                fragment1 = MyFragment.getInstance(CODE_FRAGMENT_EVENT_ACCEPTED);
-                fragment2 = MyFragment.getInstance(CODE_FRAGMENT_EVENT_PENDING);
+                fragment1 = EventFragment.getInstance(CODE_FRAGMENT_EVENT_ACCEPTED);
+                fragment2 = EventFragment.getInstance(CODE_FRAGMENT_EVENT_PENDING);
             }
         }
     }

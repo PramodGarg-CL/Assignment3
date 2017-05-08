@@ -17,13 +17,13 @@ import cpm.example.sample.assignment3.model.Event;
  */
 
 public class ScreenBActivity extends BaseActivity {
-    private RecyclerView mRecyclerView;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_recycler_view);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         List<Event> listEvent = new ArrayList<>();
         /*
         Dummy items to be displayed in the Recycler View
@@ -35,7 +35,7 @@ public class ScreenBActivity extends BaseActivity {
         listEvent.add(new Event("ItemName5", null, null, CODE_RECYCLER_LIST_EVENTS));
         listEvent.add(new Event("ItemName6", null, null, CODE_RECYCLER_LIST_EVENTS));
         listEvent.add(new Event("ItemName7", null, null, CODE_RECYCLER_LIST_EVENTS));
-        mRecyclerView.setAdapter(new EventRecyclerAdapter(listEvent, CODE_RECYCLER_LIST_EVENTS));
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(ScreenBActivity.this));
+        recyclerView.setAdapter(new EventRecyclerAdapter(listEvent, CODE_RECYCLER_LIST_EVENTS));
+        recyclerView.setLayoutManager(new LinearLayoutManager(ScreenBActivity.this));
     }
 }

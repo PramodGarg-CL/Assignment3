@@ -16,12 +16,12 @@ import cpm.example.sample.assignment3.R;
 import cpm.example.sample.assignment3.adapter.EventRecyclerAdapter;
 import cpm.example.sample.assignment3.model.Event;
 
-/**
+/*
  * Created by darknight on 20/4/17.
  */
 
-public class MyFragment extends BaseFragment {
-    private RecyclerView mRecyclerView;
+public class EventFragment extends BaseFragment {
+    private RecyclerView recyclerView;
     /*
     @code : determines the type fragment represents
      */
@@ -38,23 +38,23 @@ public class MyFragment extends BaseFragment {
     }
 
     private void init(View view) {
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         setCode();
         EventRecyclerAdapter eventRecyclerAdapter = new EventRecyclerAdapter(eventList, code);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mRecyclerView.setAdapter(eventRecyclerAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(eventRecyclerAdapter);
     }
 
     /**
-     * Returns instance of @{@link MyFragment}
+     * Returns instance of @{@link EventFragment}
      *
      * @param code : determine fragment type
-     * @return instance of MyFragment
+     * @return instance of EventFragment
      */
-    public static MyFragment getInstance(int code) {
+    public static EventFragment getInstance(int code) {
         Bundle bundle = new Bundle();
         bundle.putInt("code", code);
-        MyFragment myFragment = new MyFragment();
+        EventFragment myFragment = new EventFragment();
         myFragment.setArguments(bundle);
         return myFragment;
     }
