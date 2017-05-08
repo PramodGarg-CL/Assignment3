@@ -31,7 +31,7 @@ public class ScreenCActivity extends BaseActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         //add the viewpager to the framelayout o activity
-        fragmentTransaction.replace(R.id.frame_layout, ViewPagerFragment
+        fragmentTransaction.replace(R.id.screen_fl, ViewPagerFragment
                 .getInstance(AppConstants.CODE_VIEWPAGER_ACTIVITY));
         fragmentTransaction.commit();
 

@@ -23,7 +23,7 @@ public class ScreenBActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_recycler_view);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) findViewById(R.id.frag_rv);
         List<Event> listEvent = new ArrayList<>();
         /*
         Dummy items to be displayed in the Recycler View

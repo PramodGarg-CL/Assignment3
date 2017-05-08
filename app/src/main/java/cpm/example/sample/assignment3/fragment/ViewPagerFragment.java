@@ -80,8 +80,8 @@ public class ViewPagerFragment extends BaseFragment {
      * @param view
      */
     private void init(View view) {
-        customViewPager = (CustomViewPager) view.findViewById(R.id.view_pager);
-        tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        customViewPager = (CustomViewPager) view.findViewById(R.id.frag_vp);
+        tabLayout = (TabLayout) view.findViewById(R.id.frag_tab_lay);
         code = getArguments().getInt("code");
 
 

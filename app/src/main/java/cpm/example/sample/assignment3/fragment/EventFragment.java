@@ -38,7 +38,7 @@ public class EventFragment extends BaseFragment {
     }
 
     private void init(View view) {
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) view.findViewById(R.id.frag_rv);
         setCode();
         EventRecyclerAdapter eventRecyclerAdapter = new EventRecyclerAdapter(eventList, code);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
